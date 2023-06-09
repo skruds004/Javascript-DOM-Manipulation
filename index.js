@@ -96,7 +96,10 @@ subMenuE1.addEventListener('click', function (evt) {
   if (evt.target.tagName != 'A') {
     return;
   }
-  console.log(evt.target);
+
+  for(link of topMenuLinks) {
+    link.classList.remove('active');
+  }
 
   showingSubMenu = false;
   subMenuE1.style.top = '0';
